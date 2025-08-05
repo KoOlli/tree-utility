@@ -4,15 +4,19 @@ import sys
 
 flags = [ "--help", "--version", "-a", "-d", "-f", "-h", "-u", "-g", "-D", "-C", "-L" ]
 
-if len(sys.argv) = 0:
+if len(sys.argv) == 0:
   tree_ok
-elif len(sys.argv) = 1:
-  if sys.argv[1] = # check with flag_list or get the path, then go to other functions 
-elif len(sys.argv) = 2:
+elif len(sys.argv) == 1:
+  first_char = sys.argv[1][:1]
+  if first_char == '-':
+    tree_ok_with_flags()
+  else
+    tree_ok_with_path()
+elif len(sys.argv) == 2:
   tree_ok_with_flags_and_path
   
-  
 # functions
+# for print  ├──  └──   ->  |
 
 def tree_ok();
 
